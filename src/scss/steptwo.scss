@@ -1,0 +1,188 @@
+.twoContainer{
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    // height as the step-1
+    height: 75px;
+
+    // partition
+    display: grid;
+    grid-template-columns: auto 50px;
+    grid-auto-rows:auto;
+    
+    // for em
+    font-size: 16px;
+    padding: 10px 15px;
+    
+    align-items: center;
+    display: none;
+    & .twoLeftCon{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-column-gap: 8px;
+        & .twoImageCon{
+            width: 3em;
+            height: 3em;
+            border-radius: 50%;
+            overflow: hidden;
+            & img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transform-origin: center;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        }
+
+        & .twoHeading{
+            width: auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-row-gap: 3px;
+
+            & h3 {
+                align-self: bottom;
+                height: 17px;
+                font-size: 16px;
+                font-weight: 700;
+                align-self: end;
+            }
+
+            & ul {
+                list-style-type: none;
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-column-gap: 3px;
+                justify-content: start;
+                & li {
+                    font-size: 11px;
+                    color: rgb(181, 178, 178);
+                }
+
+                
+            }
+        }
+    }
+
+    & .twoRIghtCon{
+        position: relative;
+        height: 50px;
+        width: 50px;
+       & .twoRight{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);;
+            height: 50px;
+            width: 50px;
+            background: #E6E9E9;
+            border-radius: 50%;
+    
+            &::after{
+                position: absolute;
+                content: " ";
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 40px;
+                width: 40px;
+                background-color: #fff;
+                border-radius: inherit;
+                z-index: 99999999;
+            }
+       }
+
+       & .svgContainer{
+            z-index: 8;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);;
+            height: 50px;
+            width: 50px;
+            //overflow: hidden;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            opacity: 0;
+            & svg {
+                justify-self: center;
+                align-self: center;
+                height: 100%;
+                width: 100%;
+                fill: none; 
+                transform: rotate(-90deg);
+                $strokeWidth: 10px;
+                overflow: visible;
+                & .circleBg{
+                    stroke: #E6E9E9;
+                    stroke-width: $strokeWidth;
+                }
+
+                & .circleProgress{
+                    stroke: #038D6E;
+                    stroke-width: $strokeWidth;
+                    //stroke-width: 5px !important;
+                    stroke-dasharray: 340;
+                    stroke-dashoffset: 340;
+                }
+            }
+       }
+
+       & .circleFix{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 40px;
+            width: 40px;
+            background-color: #fff;
+            border-radius: inherit;
+            z-index: 9;
+            border-radius: 50%;
+            & .profiles{
+                position: absolute;
+                //transform: translate(-50%, -50%);
+                height: 17px;
+                width: 17px;
+                border-radius: 50%;
+                background: #fff;
+                background-size: cover;
+                // ani !important;
+                opacity: 1;
+            }
+
+            & .profile1{
+                top: -18px;
+                left: 25px;
+                background-image: url("https://randomuser.me/api/portraits/men/82.jpg");
+
+            }
+            & .profile2{
+                top: -2px;
+                left: 42px;
+                background-image: url("https://avatars.githubusercontent.com/u/25638825?s=96&v=4");
+            }
+            & .profile3{
+                top: 20px;
+                left: 43px;
+                background-image: url("https://randomuser.me/api/portraits/men/90.jpg");
+            }
+            & .profile4{
+                top: 39px;
+                left: 30px;      
+                background-image:url("https://randomuser.me/api/portraits/women/2.jpg");
+            }
+       }
+    }
+
+    & .stepThree{
+        display: none;
+    }
+}
+

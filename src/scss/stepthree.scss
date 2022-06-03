@@ -1,0 +1,64 @@
+.threeContainer{
+    position: absolute;
+    top: 65px;
+    right: 0;
+    width: 235px;
+    height: auto;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    display: none;
+    & p {
+        font-size: 13px;
+        font-family: inherit;
+        color: rgb(0, 0, 0);
+        font-weight: 400;
+        padding-bottom: 15px;
+    }
+
+    & .Readed{
+        align-self: bottom;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-row-gap: 6px;
+        & h3 {
+            font-size: 13px;
+            font-weight: 400;
+            color: #b5b2b2;
+        }
+    
+        & ul {
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            justify-content: start;
+            grid-gap: 5px;
+            & li {
+                display: grid;
+                align-items: center;
+                justify-items: center;
+                height: 22px;
+                width: 22px;
+                border-radius: 50%;
+                background: #ddd;
+                background-size: cover;
+            }
+
+            & li:nth-child(1){
+                background-image: url("https://randomuser.me/api/portraits/men/82.jpg");
+            }
+            & li:nth-child(2){
+                background-image: url("https://avatars.githubusercontent.com/u/25638825?s=96&v=4");
+            }
+            & li:nth-child(3){
+                background-image: url("https://randomuser.me/api/portraits/men/90.jpg");
+            }
+            & li:nth-child(4){
+                background-image:url("https://randomuser.me/api/portraits/women/2.jpg");
+            }
+        }
+    }
+}
